@@ -26,7 +26,7 @@ const HomeView: React.FC<Props> = ({ user }) => {
         await authClient.signOut({
             fetchOptions: {
                 onSuccess: () => {
-                    router.push("/sign-in");
+                    router.push("/auth?mode=sign-in");
                 },
                 onRequest: () => {
                     setLoading(false)

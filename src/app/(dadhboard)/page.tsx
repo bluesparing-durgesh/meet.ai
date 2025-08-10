@@ -9,7 +9,7 @@ const session = await auth.api.getSession({
   headers:await headers()
 })
 if(!session){
-  redirect("/sign-in")
+  redirect("/auth?mode=sign-in")
 }
 session.user
   return (

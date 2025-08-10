@@ -51,7 +51,8 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
+  /* change  */
+  --primary:oklch(0.5489 0.2078 264.26);
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
@@ -68,8 +69,9 @@
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
+  /* chnage */
+  --sidebar: oklch(0.7324 0.0691 264.26);
+  --sidebar-foreground: oklch(0.1441 0.0666 264.26);
   --sidebar-primary: oklch(0.205 0 0);
   --sidebar-primary-foreground: oklch(0.985 0 0);
   --sidebar-accent: oklch(0.97 0 0);
@@ -119,4 +121,67 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Slide In From Right */
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Utility classes */
+.animate-slideInFromLeft {
+  animation: slideInFromLeft 0.5s ease-in-out forwards;
+}
+
+.animate-slideInFromRight {
+  animation: slideInFromRight 0.5s ease-in-out forwards;
+}@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Slide In From Right */
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Utility classes */
+.animate-slideInFromLeft {
+  animation: slideInFromLeft 0.5s ease-in-out forwards;
+}
+
+.animate-slideInFromRight {
+  animation: slideInFromRight 0.5s ease-in-out forwards;
 }
